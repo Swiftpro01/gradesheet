@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradesheet</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   <!--<link href='bootstrap/css/bootstrap.css' rel='stylesheet' type="text/css" > --> 
+   
+</head>
+<body>
+  <script>
+    function score(){
+
+      var content = document.getElementById('score').value;
+
+       if(content >= 70 && content <=100){
+          document.getElementById('grade').value = 'A';
+        }
+        else if(content >=60 && content <=69){
+          document.getElementById('grade').value = 'B';
+        }
+        else if(content >=50 && content < 60){
+          document.getElementById('grade').value = 'C';
+        }
+        else if(content >=45 && content < 50){
+          document.getElementById('grade').value = 'D';
+        }
+        else if(content >=40 && content < 45){
+          document.getElementById('grade').value = 'E';
+        }
+        else if(content < 40){
+            document.getElementById('grade').value = 'F';
+          }
+        
+         
+    }
+
+
+    function score2(){
+
+      var content = document.getElementById('score1').value;
+      
+        if(content >= 70 && content <=100){
+          document.getElementById('grade1').value = 'A';
+        }
+        else if(content >=60 && content <=69){
+          document.getElementById('grade1').value = 'B';
+        }
+        else if(content >=50 && content < 60){
+          document.getElementById('grade1').value = 'C';
+        }
+        else if(content >=45 && content < 50){
+          document.getElementById('grade1').value = 'D';
+        }
+        else if(content >=40 && content < 45){
+          document.getElementById('grade1').value = 'E';
+        }
+        else if(content >=0 && content < 40){
+            document.getElementById('grade1').value = 'F';
+          }
+          
+    };
+
+
+    function score3(){
+
+      var content = document.getElementById('score2').value;
+      
+        if(content >= 70 && content <=100){
+          document.getElementById('grade2').value = 'A';
+        }
+        else if(content >=60 && content <=69){
+          document.getElementById('grade2').value = 'B';
+        }
+        else if(content >=50 && content < 60){
+          document.getElementById('grade2').value = 'C';
+        }
+        else if(content >=45 && content < 50){
+          document.getElementById('grade2').value = 'D';
+        }
+        else if(content >=40 && content < 45){
+          document.getElementById('grade2').value = 'E';
+        }
+        else if(content >=0 && content < 40){
+            document.getElementById('grade2').value = 'F';
+          }
+        
+          
+    };
+    function score4(){
+
+      var content = document.getElementById('score3').value;
+      
+        if(content >= 70 && content <=100 ){
+          document.getElementById('grade3').value = 'A';
+        }
+
+        else if(content >=60 && content <=69){
+          document.getElementById('grade3').value = 'B';
+        }
+        else if(content >=50 && content < 60){
+          document.getElementById('grade3').value = 'C';
+        }
+        else if(content >=45 && content < 50){
+          document.getElementById('grade3').value = 'D';
+        }
+        else if(content >=40 && content < 45){
+          document.getElementById('grade3').value = 'E';
+        }
+        else if(content >=0 && content < 40){
+            document.getElementById('grade3').value = 'F';
+          }
+          
+    };
+    function score5(){
+
+      var content = document.getElementById('score4').value;
+      
+        if(content >= 70 && content <=100){
+          document.getElementById('grade4').value = 'A';
+        }
+        else if(content >=60 && content <=69){
+          document.getElementById('grade4').value = 'B';
+        }
+        else if(content >=50 && content < 60){
+          document.getElementById('grade4').value = 'C';
+        }
+        else if(content >=45 && content < 50){
+          document.getElementById('grade4').value = 'D';
+        }
+        else if(content >=40 && content < 45){
+          document.getElementById('grade4').value = 'E';
+        }
+        else if(content >=0 && content < 40){
+            document.getElementById('grade4').value = 'F';
+          }
+          
+    };
+
+        function total(){
+          var sub1 = document.getElementById('score').value;
+          var sub2 = document.getElementById('score1').value;
+          var sub3 = document.getElementById('score2').value;
+          var sub4 = document.getElementById('score3').value;
+          var sub5 = document.getElementById('score4').value;
+          
+          var ans = Number(sub1) + Number(sub2) + Number(sub3) + Number(sub4) + Number(sub5);
+          document.getElementById('total').innerHTML = ans;
+
+          var ave= ans/5;
+          document.getElementById('average').innerHTML = ave;
+
+
+            var rem = document.getElementById('average').innerHTML;
+            if(rem >= 50){
+              document.getElementById('remark').innerHTML = 'Proud of you!' 
+            var img = document.getElementById('image1').src
+            var img = document.getElementById('image1').src  = "images/emoji.png"
+            }
+
+            else{
+              document.getElementById('remark').innerHTML = 'You dissapointed your teacher!' 
+            var img = document.getElementById('image2').src
+            var img = document.getElementById('image2').src  = "images/cry.png"
+            }
+          }
+  </script>
+
+    <div class="container">
+
+        <div class="wrapper">
+          <h1 style="display:flex; justify-content:center; color:yellowgreen; margin-bottom: 20px;"><u>This is a scoresheet</u></h1>
+
+            <table class="table  table-light table-hover  table-md">
+                <thead class="head" class="col">
+                    <tr class='table-danger'>
+                        <td>S/N</td>
+                        <td>Subject</td>
+                        <td>Scores</td>
+                        <td>Grades</td>
+                    </tr>
+                </thead>
+                <tr class='table-primary'>
+                    <td>1.</td>
+                    <td>English</td>
+                    <td><input type="text" id="score" placeholder="enter the range of 100" onkeyup="score()"></td>
+                    <td><input type="text" id="grade"></td>
+                </tr>
+                <tr class="table-success">
+                    <td>2.</td>
+                    <td>Maths</td>
+                    <td><input type="text" id="score1" placeholder="enter the range of 100" onkeyup="score2()"></td>
+                    <td><input type="text" id="grade1"></td>
+                </tr>
+                <tr class='table-danger'>
+                    <td>3.</td>
+                    <td>Chemitry</td>
+                    <td><input type="text" id="score2" placeholder="enter the range of 100" onkeyup="score3()"></td>
+                    <td><input type="text" id="grade2"></td>
+                </tr>
+                <tr class='table-warning'>
+                    <td>4.</td>
+                    <td>Biology</td>
+                    <td><input type="text" id="score3" placeholder="enter the range of 100" onkeyup="score4()"></td>
+                    <td><input type="text"id="grade3" ></td>
+                </tr>
+                <tr class='table-secondary'>
+                    <td>5.</td>
+                    <td>French</td>
+                    <td><input type="text" id="score4" placeholder="enter the range of 100" onkeyup="score5()"></td>
+                    <td><input type="text" id="grade4"></td>
+                   
+                </tr>
+
+                <tr>
+                  <td><button onclick="total()">Get Result</button></td>
+                </tr>
+
+                <tr >
+                  <td>TOTAL</td>
+                  <td><p id="total"></p></td>
+                </tr>
+
+               <tr>
+                <td>AVERAGE</td>
+                <td><p id="average"></p></td>
+               </tr>
+                  
+               <tr >
+                <td>REMARKS</td>
+                <td><p id="remark"></p></td>
+                <td><p>
+                  <img src="" alt="" id="image1">
+                  <img src="" alt="" id="image2">
+                </p></td>
+              </tr>
+            </table>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
